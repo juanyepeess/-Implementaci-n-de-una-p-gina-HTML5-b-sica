@@ -1,0 +1,199 @@
+<!DOCTYPE html> 
+<!-- Indica al navegador que se trata de un documento HTML -->
+
+<html lang="es">
+<!-- El atributo lang="es" ayuda a tecnologías asistivas a saber que el contenido está en español -->
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- UTF-8 garantiza compatibilidad con caracteres especiales en español -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Permite un diseño responsive adaptado a dispositivos móviles -->
+
+  <title>Sonos Ace | Auriculares Premium</title>
+  <!-- Título de la página que aparece en la pestaña del navegador -->
+
+  <style>
+    /* Estilos CSS embebidos. Se elige un fondo oscuro con alto contraste para buena legibilidad */
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f0f0f;
+      color: #f0f0f0;
+    }
+
+    header, nav, main, footer {
+      padding: 1.5rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    nav a {
+      margin-right: 1rem;
+      color: #4da6ff;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .producto {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .producto-info {
+      flex: 2 1 300px;
+    }
+
+    .tarjeta-opinion {
+      background-color: #1c1c1c;
+      padding: 1rem;
+      border-left: 5px solid #4da6ff;
+      border-radius: 8px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      max-width: 600px;
+    }
+
+    input, textarea {
+      padding: 0.6rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.8rem;
+      background-color: #4da6ff;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3399ff;
+    }
+
+    h1, h2, h3 {
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <!-- <header> agrupa el encabezado principal de la página -->
+    <h1>Sonos Ace</h1>
+    <!-- <h1> representa el título principal de la página -->
+    <p>Experimenta la perfección del audio con los auriculares premium de Sonos.</p>
+  </header>
+
+  <nav aria-label="Navegación principal">
+    <!-- <nav> define un bloque de navegación y aria-label mejora la accesibilidad -->
+    <a href="#caracteristicas">Características</a>
+    <a href="#opiniones">Opiniones</a>
+    <a href="#opinar">Opinar</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <main>
+    <!-- <main> contiene el contenido principal de la página -->
+
+    <section class="producto">
+      <!-- <section> agrupa información relacionada con el producto -->
+      <img src="SONOS.avif" alt="Auriculares Sonos Ace color negro">
+      <!-- El atributo alt mejora la accesibilidad describiendo la imagen a lectores de pantalla -->
+
+      <article class="producto-info">
+        <!-- <article> se usa para un contenido autónomo: la descripción del producto -->
+        <h2 id="caracteristicas">Características destacadas</h2>
+        <!-- <h2> estructura jerárquicamente el contenido, id permite la navegación con anclas -->
+
+        <ul>
+          <!-- Lista no ordenada para presentar características del producto -->
+          <li>Audio espacial con seguimiento dinámico de la cabeza.</li>
+          <li>Cancelación activa de ruido (ANC) de última generación.</li>
+          <li>Modo Aware para escuchar el entorno sin quitarte los auriculares.</li>
+          <li>Hasta 30 horas de batería con carga rápida (3 horas en 3 minutos).</li>
+          <li>Diseño premium en aluminio, cuero vegano y espuma viscoelástica.</li>
+          <li>Compatibilidad con Sonos App y emparejamiento sencillo.</li>
+        </ul>
+
+        <p>Sonos Ace ofrece un diseño cómodo, elegante y con un sonido envolvente, ideal para audiófilos y usuarios exigentes que buscan lo mejor en audio inalámbrico.</p>
+      </article>
+    </section>
+
+    <aside id="opiniones">
+      <!-- <aside> se usa para contenido complementario: opiniones de clientes -->
+      <h3>Opiniones de usuarios</h3>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+        <div class="tarjeta-opinion">
+          <p><strong>Sara R.:</strong></p>
+          <p>Un sonido claro y envolvente. Es como tener un cine en los oídos. ¡La cancelación de ruido es brutal!</p>
+        </div>
+        <div class="tarjeta-opinion">
+          <p><strong>Diego Mark.:</strong></p>
+          <p>Diseño elegante, excelente calidad de materiales y una batería impresionante.</p>
+        </div>
+      </div>
+    </aside>
+
+    <section id="opinar">
+      <!-- Sección para que los usuarios dejen su opinión -->
+      <h2>Deja tu opinión</h2>
+      <form>
+        <!-- <form> agrupa campos de entrada de opinión -->
+
+        <!-- Las etiquetas <label> están asociadas con sus respectivos campos mediante el atributo for -->
+        <label for="nombre-opinion">Nombre:</label>
+        <input type="text" id="nombre-opinion" name="nombre-opinion" placeholder="Tu nombre completo" required />
+
+        <label for="opinion">Tu opinión:</label>
+        <textarea id="opinion" name="opinion" rows="4" placeholder="¿Qué te pareció el producto?" required></textarea>
+
+        <!-- El atributo aria-label describe claramente la acción para tecnologías asistivas -->
+        <button type="submit" aria-label="Enviar opinión del producto">Enviar opinión</button>
+      </form>
+    </section>
+
+    <section id="contacto">
+      <!-- Sección de contacto, accesible y semánticamente clara -->
+      <h2>Contáctanos</h2>
+      <form>
+        <!-- Formulario con campos accesibles y bien etiquetados -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="tucorreo@example.com" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+
+        <button type="submit" aria-label="Enviar formulario de contacto">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <!-- <footer> contiene información secundaria como derechos de autor -->
+    <p>&copy; 2025 Sonos Colombia. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
